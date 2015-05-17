@@ -11,6 +11,17 @@ var elixir = require('laravel-elixir');
  |
  */
 
+ //Compile Without Source Maps
+elixir.config.sourcemaps = false;
+
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.sass('app.scss')
+    .scripts([
+    	"libs/jquery.js",
+    	"libs/angular-min.js",
+    	"app.js",
+    	"app/*js",
+    	"bootstrap-sprockets.js"
+    	], "public/js/app.js")
+    .version(['css/app.css', 'js/app.js']);
 });
