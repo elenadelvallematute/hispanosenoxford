@@ -54,7 +54,7 @@
 					</ul>
 				</li>
 			@else
-				<li class="page-scroll"><a href="#login">Login</a></li>
+				<li class="page-scroll"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
 			@endif
 
 		  </ul>

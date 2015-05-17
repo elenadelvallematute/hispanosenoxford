@@ -20,10 +20,22 @@
 			@include('base.navigation')
 		@show
 
+		
+		{{-- Page content --}}
 		@yield('content')
 
+
+		{{-- Include here all the modals that should be available in all the views --}}
+		@section('modals')
+			@include('modals.login')
+		@show
+
+
+		{{-- Footer content --}}
         @include('base.footer')
 
+
+        {{-- Scripts --}}
         @section('scripts')
         	@include('base.scripts')
         @show

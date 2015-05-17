@@ -12,6 +12,7 @@
 
 @section('content')
 	@include('main.slider')
-
 @stop
+
+
 
