@@ -4,10 +4,12 @@ var app = angular.module('app', []).config(['$httpProvider','$interpolateProvide
     $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
 
     //Add the token to all the http requests
-	$httpProvider.defaults.headers.post['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content');
-	$httpProvider.defaults.headers.put['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content');
-	$httpProvider.defaults.headers.get['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content');
-	$httpProvider.defaults.headers.delete['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content');
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+	$httpProvider.defaults.headers.post= { 'X-CSRF-TOKEN' : $('meta[name=csrf-token]').attr('content')};
+	$httpProvider.defaults.headers.put= { 'X-CSRF-TOKEN' : $('meta[name=csrf-token]').attr('content')};
+	$httpProvider.defaults.headers.get={ 'X-CSRF-TOKEN' : $('meta[name=csrf-token]').attr('content')}
+	$httpProvider.defaults.headers.delete={ 'X-CSRF-TOKEN' : $('meta[name=csrf-token]').attr('content')};
 
     
 }]);;

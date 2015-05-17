@@ -19,9 +19,11 @@ elixir(function(mix) {
     .scripts([
     	"libs/jquery.js",
     	"libs/angular-min.js",
+    	"libs/bootstrap.js",
+    	"libs/**/*.js",
     	"app.js",
     	"app/*js",
-    	"bootstrap-sprockets.js"
+    	"theme.js"
     	], "public/js/app.js")
     .version(['css/app.css', 'js/app.js']);
 });

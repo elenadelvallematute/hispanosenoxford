@@ -1,0 +1,4 @@
+// Core variables and mixins
+@import "owl-carousel/owl.carousel.scss";
+@import "owl-carousel/owl.theme.scss";
+@import "owl-carousel/owl.transitions.scss";
